@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radha Govindo Tea Stall - Loose Tea & Winter Pitha Santipur</title>
+  <meta name="description" content="Radha Govindo Tea Stall, Netaji Subhas Road, Near Dakghar Bus Stop, Santipur (WB 741404). Retail and wholesale suppliers of premium loose CTC tea, packaged milk powder, disposable plates & bowls, and traditional Bengali winter pithas. Over 50 years of service.">
+  <meta name="keywords" content="Radha Govindo Tea Stall, Santipur tea stall, loose tea Santipur, CTC tea Nadia, disposable plates Santipur, Dakghar bus stop tea, Pitha Santipur, Patisapta, Dudh Puli">
+
+  <!-- Explicit Site Name & Title for Search Engines -->
+  <meta property="og:site_name" content="Radha Govindo Tea Stall">
+  <meta property="og:title" content="Radha Govindo Tea Stall | Santipur">
+  <meta property="og:description" content="Retail and wholesale loose CTC tea, green tea, milk powder, disposable tableware, and seasonal Bengali Pitha & Payesh in Santipur.">
+  <meta property="og:image" content="https://saharajkumar205.github.io/Sanjib-Saha-Tea-Shop/logo.png">
+
+  <!-- JSON-LD Site Name Definition for Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Radha Govindo Tea Stall",
+    "alternateName": ["রাধাগোবিন্দ টি স্টল", "Radha Govindo Tea Shop"],
+    "url": "https://saharajkumar205.github.io/Sanjib-Saha-Tea-Shop/"
+  }
+  </script>
+
+  <!-- Local Business Schema for Coordinates, Hours & Contact -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Radha Govindo Tea Stall",
+    "image": "https://saharajkumar205.github.io/Sanjib-Saha-Tea-Shop/logo.png",
+    "telephone": "+919933125263",
+    "url": "https://saharajkumar205.github.io/Sanjib-Saha-Tea-Shop/",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Netaji Subhas Road, Near Dakghar Bus Stop",
+      "addressLocality": "Santipur",
+      "addressRegion": "West Bengal",
+      "postalCode": "741404",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 23.242820,
+      "longitude": 88.434550
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "06:30",
+        "closes": "21:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "07:00",
+        "closes": "13:30"
+      }
+    ],
+    "priceRange": "₹"
+  }
+  </script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: #fefae0;
+      color: #283618;
+      line-height: 1.6;
+      padding-bottom: 70px;
+    }
+
+    /* Navigation Header Banner */
+    nav {
+      background-color: #5c2c0a !important;
+      color: #ffffff !important;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+      width: 100%;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .nav-brand img {
+      height: 75px;
+      width: auto;
+      display: block;
+      border-radius: 6px;
+      background: #ffffff;
+    }
+
+    .shop-title {
+      font-size: clamp(1.6rem, 3.2vw, 2.6rem);
+      font-weight: 900;
+      letter-spacing: 2.5px;
+      color: #ffffff !important;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      color: #faedcd !important;
+      text-decoration: none;
+      font-size: 1.05rem;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #ffffff !important;
+    }
+
+    /* Hero Section with Moving Photo Slideshow */
+    .hero {
+      position: relative;
+      text-align: center;
+      padding: 5.5rem 1.5rem;
+      border-bottom: 2px solid #d4a373;
+      overflow: hidden;
+      color: #ffffff;
+      background-color: #3d1c06;
+    }
+
+    .hero-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      animation: crossfade 15s infinite;
+      z-index: 1;
+    }
+
+    .slide-1 {
+      background-image: url('https://images.unsplash.com/photo-1571934811356-5cc061b6821f?auto=format&fit=crop&w=1600&q=80');
+      animation-delay: 0s;
+    }
+
+    .slide-2 {
+      background-image: url('https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&w=1600&q=80');
+      animation-delay: 5s;
+    }
+
+    .slide-3 {
+      background-image: url('https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=1600&q=80');
+      animation-delay: 10s;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(35, 18, 5, 0.65);
+      z-index: 2;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      max-width: 750px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      color: #faedcd;
+      margin-bottom: 0.8rem;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin: 0 auto 1.8rem;
+      color: #ffffff;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 0.75rem 1.5rem;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: #8b4513;
+      color: #ffffff;
+      border: 2px solid #8b4513;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #faedcd;
+      border: 2px solid #faedcd;
+    }
+
+    .btn-secondary:hover {
+      background: #faedcd;
+      color: #5c2c0a;
+    }
+
+    @keyframes crossfade {
+      0% { opacity: 0; transform: scale(1); }
+      10% { opacity: 1; }
+      33% { opacity: 1; }
+      43% { opacity: 0; transform: scale(1.04); }
+      100% { opacity: 0; }
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+
+    h2.section-title {
+      text-align: center;
+      font-size: 1.9rem;
+      color: #5c2c0a;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+
+    h2.section-title::after {
+      content: "";
+      width: 50px;
+      height: 3px;
+      background: #d4a373;
+      display: block;
+      margin: 8px auto 0;
+      border-radius: 2px;
+    }
+
+    .story-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      border-left: 5px solid #8b4513;
+    }
+
+    .story-card p {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+    }
+
+    .story-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .product-card {
+      background: #ffffff;
+      padding: 1.8rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      border-top: 4px solid #8b4513;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .product-card h3 {
+      font-size: 1.25rem;
+      color: #5c2c0a;
+      margin-bottom: 0.6rem;
+    }
+
+    .product-desc {
+      font-size: 0.95rem;
+      color: #606c38;
+      margin-bottom: 1rem;
+    }
+
+    .product-list {
+      list-style: none;
+      margin-bottom: 1.2rem;
+    }
+
+    .product-list li {
+      padding: 6px 0;
+      border-bottom: 1px dashed rgba(92, 44, 10, 0.15);
+      font-size: 0.95rem;
+    }
+
+    .pack-badge {
+      display: inline-block;
+      font-size: 0.85rem;
+      color: #5c2c0a;
+      font-weight: 600;
+      background: #faedcd;
+      padding: 6px 10px;
+      border-radius: 6px;
+      margin-top: auto;
+    }
+
+    /* Pitha Menu Table Styling */
+    .pitha-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      border-top: 5px solid #8b4513;
+    }
+
+    .pitha-header-note {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .pitha-blessing {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #8b4513;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.3rem;
+    }
+
+    .pitha-subtitle {
+      font-size: 0.98rem;
+      color: #606c38;
+    }
+
+    .menu-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.2rem;
+    }
+
+    .menu-table th {
+      background-color: #faedcd;
+      color: #5c2c0a;
+      text-align: left;
+      padding: 12px 14px;
+      font-size: 0.95rem;
+      border-bottom: 2px solid #d4a373;
+    }
+
+    .menu-table th:last-child,
+    .menu-table td:last-child {
+      text-align: right;
+    }
+
+    .menu-table td {
+      padding: 11px 14px;
+      border-bottom: 1px dashed rgba(92, 44, 10, 0.18);
+      font-size: 0.96rem;
+    }
+
+    .menu-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .menu-table tr:hover {
+      background-color: #fffdf5;
+    }
+
+    .item-tag {
+      display: inline-block;
+      font-size: 0.8rem;
+      background: #fefae0;
+      color: #8b4513;
+      border: 1px solid #d4a373;
+      padding: 1px 7px;
+      border-radius: 12px;
+      margin-left: 6px;
+      font-weight: 600;
+    }
+
+    .price-pill {
+      font-weight: 700;
+      color: #5c2c0a;
+      white-space: nowrap;
+    }
+
+    .visit-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .info-block {
+      margin-bottom: 1.2rem;
+    }
+
+    .info-block strong {
+      display: block;
+      color: #8b4513;
+      margin-bottom: 0.3rem;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 250px;
+      border: 0;
+      border-radius: 8px;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: #ffffff;
+      padding: 12px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      z-index: 1000;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+        padding: 1rem;
+      }
+      .nav-brand {
+        flex-direction: column;
+        gap: 8px;
+      }
+      .shop-title {
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+        white-space: normal;
+      }
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+      }
+      .visit-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero {
+        padding: 3.5rem 1rem;
+      }
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .pitha-card {
+        padding: 1.2rem;
+      }
+      .menu-table th, .menu-table td {
+        padding: 9px 8px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Header Banner -->
+  <nav>
+    <div class="nav-brand">
+      <img src="logo.png" alt="Radha Govindo Tea Stall Logo">
+      <span class="shop-title">RADHA GOVINDO TEA STALL</span>
+    </div>
+    <div class="nav-links">
+      <a href="#products">Products</a>
+      <a href="#pitha-menu">Pitha Menu</a>
+      <a href="#story">About</a>
+      <a href="#visit">Visit</a>
+    </div>
+  </nav>
+
+  <!-- Hero Header with Moving Photo Slideshow -->
+  <header class="hero">
+    <div class="hero-slide slide-1"></div>
+    <div class="hero-slide slide-2"></div>
+    <div class="hero-slide slide-3"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <h1>Quality Loose Tea & Daily Supplies</h1>
+      
+      <p style="font-weight: 600; color: #ffe6a7; margin-bottom: 0.5rem;">
+        রাধাগোবিন্দ টি স্টল — শান্তিপুরে বিশ্বস্ত পাইকারি ও খুচরো চা পাতা বিক্রেতা
+      </p>
+
+      <p>Providing premium Green Tea, CTC & leaf tea, packaged milk powder, disposable plates & bowls, and seasonal Bengali Pitha & Payesh.</p>
+      <div class="cta-buttons">
+        <a href="#products" class="btn btn-primary">View Products</a>
+        <a href="#pitha-menu" class="btn btn-secondary">Pitha & Payesh Menu</a>
+        <a href="#visit" class="btn btn-secondary">Find Our Shop</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Story Section -->
+  <section class="container" id="story">
+    <h2 class="section-title">Our Story / আমাদের কথা</h2>
+    <div class="story-card">
+      <!-- English Version -->
+      <p>For over 50 years, our shop has served the Santipur community as a trusted destination for quality loose tea and daily essentials.</p>
+      <p>We supply carefully selected CTC and loose tea leaf blends for rich, full-bodied home brewing, alongside trusted packaged dairy milk powder. We also stock durable food plates and bowls for family events, gatherings, and local catering needs—all available at fair retail and bulk rates.</p>
+
+      <hr style="border: 0; border-top: 1px dashed rgba(92, 44, 10, 0.25); margin: 1.2rem 0;">
+
+      <!-- Bengali Version -->
+      <p style="font-weight: 500;">৫০ বছরেরও বেশি সময় ধরে আমাদের দোকান উন্নত মানের খোলা চা পাতা ও নিত্যপ্রয়োজনীয় সামগ্রীর এক বিশ্বস্ত ঠিকানা হিসেবে শান্তিপুরবাসীর সেবা করে আসছে।</p>
+      <p style="font-weight: 500;">আমরা গৃহস্থালির নিয়মিত ব্যবহারের জন্য উন্নত মানের সিটিসি (CTC) ও সুগন্ধি চা পাতার ব্লেন্ড এবং প্যাকেটজাত মিল্ক পাউডার সরবরাহ করি। এছাড়াও যেকোনো পারিবারিক অনুষ্ঠান, পূজা-পার্বণ ও ক্যাটারিংয়ের জন্য টেকসই ডিসপোজেবল থালা ও বাটি সুলভ পাইকারি ও খুচরো মূল্যে পাওয়া যায়।</p>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="container" id="products">
+    <h2 class="section-title">What We Sell</h2>
+    <div class="product-grid">
+
+      <!-- Product 1: Loose Tea -->
+      <div class="product-card">
+        <div>
+          <h3>🍃 Quality Loose Tea (Chai Patti)</h3>
+          <p class="product-desc">Strong, aromatic tea leaves suited for daily household cups and tea vendors.</p>
+          <ul class="product-list">
+            <li><strong>Premium Kadak CTC:</strong> Rich color and strong aroma</li>
+            <li><strong>Daily Family Blend:</strong> Balanced flavor for regular brewing</li>
+            <li><strong>Strong Hotel Blend:</strong> Deep liquor and high yield</li>
+            <li><strong>Pure Green Tea:</strong> Fresh and antioxidant-rich leaf</li>
+          </ul>
+        </div>
+        <span class="pack-badge">Available in 100g, 250g, 500g, 1kg & bulk</span>
+      </div>
+
+      <!-- Product 2: Packaged Milk Powder -->
+      <div class="product-card">
+        <div>
+          <h3>🥛 Packaged Milk Powder</h3>
+          <p class="product-desc">Sealed, hygienic dairy whiteners for creamy tea, desserts, and daily use.</p>
+          <ul class="product-list">
+            <li><strong>Instant Dairy Milk Powder:</strong> Dissolves easily with rich flavor</li>
+            <li><strong>Sealed Brand Packs:</strong> Guaranteed fresh and long-lasting</li>
+          </ul>
+        </div>
+        <span class="pack-badge">Available in retail pouches & multi-pack sets</span>
+      </div>
+
+      <!-- Product 3: Disposable Dining Supplies -->
+      <div class="product-card">
+        <div>
+          <h3>🍽️ Disposable Plates & Bowls</h3>
+          <p class="product-desc">Hygienic tableware for pujas, parties, picnics, and catering services.</p>
+          <ul class="product-list">
+            <li><strong>Food Plates (Thali):</strong> Sturdy disposable meal plates</li>
+            <li><strong>Small Bowls (Bati):</strong> Ideal for sweets, curries, chat, & prasad</li>
+          </ul>
+        </div>
+        <span class="pack-badge">Sold in dasta (bundles) & bulk packs</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Seasonal Pitha & Payesh Menu Section -->
+  <section class="container" id="pitha-menu">
+    <h2 class="section-title">Homemade Pitha & Payesh / পিঠে ও পায়েস</h2>
+    <div class="pitha-card">
+      <div class="pitha-header-note">
+        <p class="pitha-blessing">🙏 Joy Jagannath • Joy Modon Gopal 🙏</p>
+        <p class="pitha-subtitle">Freshly prepared traditional Bengali pithas & Nolen Gurer delicacies</p>
+      </div>
+
+      <table class="menu-table">
+        <thead>
+          <tr>
+            <th>Item Name / পিঠের নাম</th>
+            <th>Quantity / পরিমাণ</th>
+            <th>Price / মূল্য</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Patisapta</strong> <span class="item-tag">Kheer / Coconut</span></td>
+            <td>1 Piece</td>
+            <td class="price-pill">₹30 (Kheer) / ₹25 (Coconut)</td>
+          </tr>
+          <tr>
+            <td><strong>Dudh Puli</strong> <span class="item-tag">Kheer</span></td>
+            <td>1 Plate (4 pcs)</td>
+            <td class="price-pill">₹100/-</td>
+          </tr>
+          <tr>
+            <td><strong>Dudh Puli</strong> <span class="item-tag">Coconut</span></td>
+            <td>1 Plate (5 pcs)</td>
+            <td class="price-pill">₹100/-</td>
+          </tr>
+          <tr>
+            <td><strong>Vapa Puli</strong> <span class="item-tag">Kheer</span></td>
+            <td>1 Plate (5 pcs)</td>
+            <td class="price-pill">₹100/-</td>
+          </tr>
+          <tr>
+            <td><strong>Vapa Puli</strong> <span class="item-tag">Coconut</span></td>
+            <td>1 Plate (6 pcs)</td>
+            <td class="price-pill">₹100/-</td>
+          </tr>
+          <tr>
+            <td><strong>Fried Moong Puli</strong> <span class="item-tag">Coconut</span></td>
+            <td>1 Plate (5 pcs)</td>
+            <td class="price-pill">₹100/-</td>
+          </tr>
+          <tr>
+            <td><strong>Chandan Kath Pitha</strong></td>
+            <td>1 Plate (5 pcs)</td>
+            <td class="price-pill">₹100/-</td>
+          </tr>
+          <tr>
+            <td><strong>Soru Chakuli Pitha</strong> <span class="item-tag">With Nolen Gur</span></td>
+            <td>1 Piece</td>
+            <td class="price-pill">₹15/- per pc</td>
+          </tr>
+          <tr>
+            <td><strong>Dudh Chitoi Pitha</strong></td>
+            <td>1 Plate (4 pcs)</td>
+            <td class="price-pill">₹100/-</td>
+          </tr>
+          <tr>
+            <td><strong>Chusi Pitha</strong></td>
+            <td>250 ml</td>
+            <td class="price-pill">₹100/-</td>
+          </tr>
+          <tr>
+            <td><strong>Nolen Gurer Payesh</strong></td>
+            <td>250 ml</td>
+            <td class="price-pill">₹80/-</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div style="text-align: center; margin-top: 1rem;">
+        <span class="pack-badge">📞 Pre-order on WhatsApp or call for fresh batch availability</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Feedback Section -->
+  <section class="container" id="reviews" style="padding-top: 1rem; padding-bottom: 2rem;">
+    <h2 class="section-title">Customer Feedback / গ্রাহকদের মতামত</h2>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;">
+      
+      <!-- Card 1 -->
+      <div style="background: #ffffff; padding: 1.5rem; border-radius: 12px; border-left: 5px solid #8b4513; box-shadow: 0 4px 12px rgba(0,0,0,0.06);">
+        <p style="font-size: 0.98rem; font-style: italic; color: #283618; margin-bottom: 0.4rem;">
+          "Best kadak CTC blend in the Dakghar area. Regular buyer for my morning tea."
+        </p>
+        <p style="font-size: 0.88rem; color: #606c38; margin-bottom: 0.8rem;">
+          "ডাকঘর অঞ্চলের সেরা কড়ক চা পাতা। সকালের চায়ের জন্য এখান থেকেই নিয়মিত নিই।"
+        </p>
+        <div style="display: flex; align-items: center; gap: 6px;">
+          <span style="color: #d4a373; font-size: 1.05rem; letter-spacing: 2px;">★★★★★</span>
+          <span style="font-weight: 700; font-size: 0.85rem; color: #5c2c0a;">— Samir K. Das, Krishnapur, Kolkata</span>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div style="background: #ffffff; padding: 1.5rem; border-radius: 12px; border-left: 5px solid #8b4513; box-shadow: 0 4px 12px rgba(0,0,0,0.06);">
+        <p style="font-size: 0.98rem; font-style: italic; color: #283618; margin-bottom: 0.4rem;">
+          "Got bulk disposable plates and cups for our family ceremony at reasonable rates."
+        </p>
+        <p style="font-size: 0.88rem; color: #606c38; margin-bottom: 0.8rem;">
+          "পারিবারিক অনুষ্ঠানের জন্য পাইকারি দরে ভালো মানের থালা ও বাটি পেয়েছি।"
+        </p>
+        <div style="display: flex; align-items: center; gap: 6px;">
+          <span style="color: #d4a373; font-size: 1.05rem; letter-spacing: 2px;">★★★★★</span>
+          <span style="font-weight: 700; font-size: 0.85rem; color: #5c2c0a;">— Sajal K. Saha, Sutragarh, Santipur</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Location & Hours Section -->
+  <section class="container" id="visit">
+    <h2 class="section-title">Visit Us</h2>
+    <div class="visit-grid">
+      <div>
+        <div class="info-block">
+          <strong>📍 Address</strong>
+          <p>Radha Govindo Tea Stall,<br>Netaji Subhas Road, Near Dakghar Bus Stop, Santipur,<br>West Bengal - 741404</p>
+        </div>
+
+        <div class="info-block">
+          <strong>⏰ Opening Hours</strong>
+          <p>Monday – Saturday: 8:30 AM – 9:30 PM<br>Sunday: 9:00 AM – 9:30 PM</p>
+        </div>
+
+        <div class="info-block">
+          <strong>📞 Phone / Contact</strong>
+          <p>+91 9933125263</p>
+        </div>
+      </div>
+
+      <!-- Google Maps Embed Pin -->
+      <div class="map-container">
+        <iframe 
+          src="https://maps.google.com/maps?q=23.242820,88.434550&hl=en&z=18&output=embed" 
+          width="100%" 
+          height="250" 
+          style="border:0; border-radius: 8px;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- WhatsApp Action -->
+  <a href="https://wa.me/919933125263?text=Hi!%20I%20saw%20your%20shop%20website%20and%20wanted%20to%20inquire%20about%20tea,%20pitha,%20and%20supplies." class="whatsapp-float" target="_blank">
+    💬 Chat / Order on WhatsApp
+  </a>
+
+</body>
+</html>
